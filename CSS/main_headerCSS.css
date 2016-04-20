@@ -1,0 +1,48 @@
+.header {
+  width: 100%;
+  height: 100%;
+  background-color: #333333; 
+}
+
+.nav {
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.nav ul { 
+  list-style: none;   
+  overflow: hidden;
+  display: table-row;
+  color: #FFFFFF;
+  font-family: 'BlackJack', sans-serif;
+  font-weight: 600px;
+  font-size: 20px;
+  
+}
+
+.nav li {
+  color: #FFFFFF;
+  font-family: 'BlackJack', sans-serif;
+  font-weight: 600px;
+  font-size: 20px;
+  display: inline;
+}
+
+
+.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+}  
+
+.nav div {
+    float: right; 
+    
+}
+
+ 
+

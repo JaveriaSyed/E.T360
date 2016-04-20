@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      
+      <title>E.T360.com</title>
+       <!--<link rel="stylesheet" type='text/css' href="CSS/fontello.css">  --> 
+        <link rel= "stylesheet" type='text/css' href="CSS/explore_pageCSS.css"/ >    
+            
+          <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+            
+            
+         <script type="text/javascript" src ="./JS/exploreSearch.js"></script>
+             
+             
+  </head>
+								<!--Body-->
+ <body>
+                                 <!--Members -->     
+    
+       <table class="memberstars">
+        <tr>
+        <td>
+           <div class="logo">
+           <img src ="COMPANY_LOGO/LOGO.png"> 
+           </div>
+       </td>
+           <td>
+               <marquee scrollamount="8" direction="left">
+                 <h2> 
+                 Become a member ☆  Collect points ☆  Earn a free trip! 
+                 </h2>
+               </marquee>
+          </td>
+      </tr>
+           </table>                                                                      
+                                  <!--Navigation-->
+								
+ <div class="header">
+        <ul class="nav">      
+          <ul>
+           <li><a href="flightsPage.html">Flights</a></li>
+           <li><a href="cruisesPage.html">Cruises</a></li>
+            <li><a href="#">Hotels</a></li>
+			<li><a href="#">Hot Deals</a></li>
+			<li><a href="explorePage.html">Explore</a></li>
+			<li><a href="aboutPage.html">About</a></li>
+           <li><a href="ContactusPage.html">Contact</a></li>
+           <li><a href="members.html">Members</a></li>
+        </ul>
+        </ul>
+      </div>
+      
+      <!-- PAGE DESCRIPTION -->
+      
+      <div class="pageDescription">
+         
+            <h2> Explore.Discover.Experience. </h2>   
+      <p> Unlimited possibilities.
+        Experience Montreal.  </p>
+         
+      </div>
+      
+      
+      <!--MAP EXPLORE -->
+      <div class="exploreSearch">
+    <h3>Please enter a region within Montreal.</h3>
+    <form>
+        <input type="search" id="city" class="search rounded" placeholder="Search" onchange="findCity()" />
+        <button class="icon-search-1 button_shape" onclick="findCity()"><i class="box_search" >Search info</i> </button>
+    </form>
+     </div>
+     
+	              
+     
+      <div class="mapmontreal">
+         <img src="/IMAGES/montrealMap.png" alt="worldMap" name="wMap" usemap="#wMap">
+         
+             <map name="wMap">
+            <area shape="poly" coords="68,100,91,96,96,89,109,77,138,71,152,74,157,82,169,92,182,99,187,112,200,123,185,136,182,144,182,154,186,156,199,156,206,166,212,188,213,198,212,205,205,205,116,146,93,138,74,131,63,122,64,104,74,92"
+            href="" alt="" title="Montreal West">
+                 
+            <area shape="poly" coords="206,122,202,131,196,127,189,136,185,148,190,156,206,158,210,170,215,189,214,203,207,210,218,232,234,236,254,230,243,245,261,238,278,233,286,224,289,209,271,181,273,160,289,157,308,145,303,132,297,123,289,120,285,113" href="" alt="" title="Montreal">
+                    
+            <area shape="poly" coords="287,111,297,120,302,128,307,137,311,148,297,152,285,156,278,167,268,187,282,203,303,194,322,182,350,171,363,150,391,128,405,109,418,102,421,100,407,92,373,95,348,96,326,96,314,96" href="" alt="" title="Montreal East">  
+            
+            
+                                 
+          </map> 
+      </div>
+      
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script type="text/javascript" src="./javaScript/js_Resizer/imageMapResizer.min.js"></script>    
+
+  
+    <script type="text/javascript">
+
+		$('map').imageMapResize();
+
+	</script>  
+    </body>
+</html>      
+      
+      

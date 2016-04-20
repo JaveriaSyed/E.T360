@@ -1,0 +1,42 @@
+.services {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+
+.services .col {
+  float: left;
+  width: 33%;
+  font-family: 'BlackJack', sans-serif;
+  text-align: center;
+}
+
+.services img {
+  height: 32px;
+}
+
+.services h2 {
+  font-weight: 600;
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+.services p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 50px;
+  margin-bottom: 40px;
+}
+
+.services a {
+  background-color: #ffffff;
+  padding: 25px;
+  color: #333333;
+  margin: 30px;
+  Border-color:#333333;
+}
+
+.clearfix {
+  clear: both;
+}

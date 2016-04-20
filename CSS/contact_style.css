@@ -1,0 +1,57 @@
+@import url(main_headerCSS.css);
+@import url(main_memberstarsCSS.css);
+@import url(contact_emailCSS.css);
+
+
+
+html{ 
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(/IMAGES/MTL.jpg);
+  background background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+}
+
+
+
+
+.main {
+  position: relative;
+  top: 180px;
+  text-align: center;
+}
+
+
+
+.main a {
+  background-color: #333333;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1.3px;
+  padding: 16px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+
+@media (max-width: 500px) {
+  .main h1 {
+    font-size: 50px;
+    padding: 0 40px;
+  }
+
+  .supporting .col {
+    width: 100%;
+  }
+}

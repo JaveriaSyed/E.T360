@@ -1,0 +1,37 @@
+.top {
+  position: relative;
+  top: 0;
+  text-align: center;
+  padding: 50px;
+}
+
+.top h1 {
+  color: #333;
+  font-family: 'BlackJack', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 70px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.top a {
+  font-family: 'BlackJack', cursive;
+  font-size: 25px;
+  padding: 25px;
+  color: white;    
+  margin: 30px;
+  border-width: thick;
+  Border-color:#333333;
+}
+
+.top p {
+    font-family: 'BlackJack', cursive;
+    font-stretch: expanded; 
+    font-size: 25px;
+    color: white;
+    
+}
+.clearfix {
+  clear: both;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      
+      <title>E.T360.com</title>
+               <link href="~/Content/css/jquery-ui.css" rel="stylesheet" />
+<script src="~/Content/js/jquery-1.10.2.js"></script>
+<script src="~/Content/js/jquery-ui.js"></script>
+       <link rel= "stylesheet" type='text/css' href="CSS/flights_styleCSS.css"/ >
+       <!--<link rel="stylesheet" type='text/css' href="CSS/fontello.css">  --> 
+             
+             
+  </head>
+								<!--Body-->
+ <body>
+     
+     <!--Members -->     
+    
+       <table class="memberstars">
+        <tr>
+        <td>
+           <div class="logo">
+           <img src ="COMPANY_LOGO/LOGO.png"> 
+           </div>
+       </td>
+           <td>
+               <marquee scrollamount="8" direction="left">
+                 <h2> 
+                 Become a member ☆  Collect points ☆  Earn a free trip! 
+                 </h2>
+               </marquee>
+          </td>
+      </tr>
+       </table> 
+                                                                                        
+                                                                                               
+                                                                                               
+                                  <!--Navigation-->
+								
+ 								
+  <div class="header">
+        <ul class="nav">      
+          <ul>
+           <li><a href="flightsPage.html">Flights</a></li>
+           <li><a href="cruisesPage.html">Cruises</a></li>
+            <li><a href="#">Hotels</a></li>
+			<li><a href="#">Hot Deals</a></li>
+			<li><a href="explorePage.html">Explore</a></li>
+			<li><a href="aboutPage.html">About</a></li>
+           <li><a href="ContactusPage.html">Contact</a></li>
+           <li><a href="members.html">Members</a></li>
+        </ul>
+        </ul>
+      </div>
+  
+     
+     <div class="boxSearch">
+          <h1>
+                Flight Search
+         </h1>
+         <br/> <br/><br/> 
+         <strong>   
+       <label for="tags"> Depart From: </label>  <input id="tags">
+             <br/><br/>
+          <label for="tags">Arrive At: </label>  <input id="tags">
+         <br/><br/> <br/><br/>
+         Arrival Time: <input type="text" placeholder="dd/mm/yyyy" aria-required="true">
+          <br/><br/>    
+        Departure Time: <input type="text" placeholder="dd/mm/yyyy" aria-required="true">
+         <br/><br/>
+         
+     
+         </strong>
+         
+     </div>
+     
+     <div class="boxResults">
+          <h1>
+                Results
+         </h1>
+         
+         <br/> <br/><br/> 
+         
+         <strong>   
+     
+             <label> From: </label>
+         <br/><br/>
+             <label> To: </label>
+          <br/><br/> <br/><br/>     
+         <label>Departing At:</label>
+             <br/><br/>
+         <label>
+             Arriving At: 
+         </label>
+         </strong>
+         
+
+
+  <script>
+      
+  $(function() {
+    var availableTags = [
+      "Montreal",
+      "Toronto",
+      "Calgary",
+      "Ottawa",
+      "Edmonton",
+      "Mississauga",
+      "North York",
+      "Winnipeg",
+      "Vancouver",
+      "Scarborough"
+    ];
+      
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  });
+      
+  </script>
+
+    </body>
+</html>
