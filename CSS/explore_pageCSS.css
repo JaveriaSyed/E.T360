@@ -57,9 +57,8 @@ body {
   }
 }
 .mapExplore {
-    height: 200px;
-    width:200px;
-    padding; 100px;
+
+    width: 100%;
     margin: inherit;
 }
 
@@ -82,9 +81,7 @@ body {
 .pageDescription {
     padding: 100px;
     margin: inherit;
-    
-    
-    
+    height: 340px;
 }
 
 
@@ -138,6 +135,17 @@ body {
    margin-left: -250px;
    margin-top: inherit;
   
+}
+
+#exploreOptions
+{
+    background-image: url("../IMAGES/gradientwhite.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    list-style: none;
+    display: inline-block;
+    opacity: 0.7;
+
 }
 
 

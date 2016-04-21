@@ -178,13 +178,14 @@ $(document).ready(function () {
   
   // Trigger error animation on Checkout button
   
-  $('.checkout').on('click', function () {
-    $(this).addClass('active');
-    $('.error').css('display', 'block');
-    setTimeout(function () {
-      $('.checkout').removeClass('active');    
-      $('.error').css('display', 'none');      
-    }, 1000);
+  $('.checkout').on('click', function setCookie (cvalue) {
+    
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cvalue;
+    window.location = "paymentPage.html";
+      
   });    
   
 });

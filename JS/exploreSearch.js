@@ -17,9 +17,6 @@ var Array3 = [".",
 
 
 
-
-
-
 function findCity() {
     var indexPosition = -1;
     var cityName = document.getElementById("city").value.toLowerCase();
