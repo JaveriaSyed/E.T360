@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html >
   <head>
-      
-      <title>E.T360.com</title>
-       <link rel= "stylesheet" type='text/css' href="CSS/cruises_styleCSS.css"/ >
-       <!--<link rel="stylesheet" type='text/css' href="CSS/fontello.css">  --> 
-              <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    
+    <link rel= "stylesheet" type='text/css' href="CSS/cruises_styleCSS.css"/ >
+    
+        <script src="js/prefixfree.min.js"></script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+        <script src="./JS/cruisecart.js"></script>
 
 
-           
-            <script src = "./JS/cart_cruise.js"></script>
-            
-             
+    
   </head>
-								<!--Body-->
- <body>
+
+  <body>
+    
+    								<!--Body-->
+
                                  <!--Members -->     
     
        <table class="memberstars">
@@ -68,62 +72,45 @@
         </a>
       
         <section class='shop'></section>
-    
-                    
-                          
-      <div id='productTemplate' type='text/template'>
-          <div class="product">
-            <h1></h1>
-              <p></p>
-          <div class="button">
-              <div class="price"></div>
-                  <a class="addtocart">
-                      <div class="add">Add to Cart</div>
-                      <div class="added">Added!</div>
-                  </a>
-              </div>
-          </div>
-    </div>        
-        
-
-     <div id='cartItem' type='text/template'>
-          <li>
-          <div class="cart-product">
-          <input class="quantity" value="1">
-          </div>
-          <div class="cart-description">
-          <h3></h3>
-          <span class="subtotal"></span>
-          </div>
-          </li>
-        </div>     
-
-                    <!-- Cart Packages MTL-->
 
     <div id='cart'>
-      <h2>Your Shopping Cart</h2>
-      <ul class='cart-items'></ul>
-          <div class='total'>
-            <div class='subtotalTotal'>
-              Subtotal
-              <span id="subtotal">$0.00</span>
-            </div>
-            <div class='taxes'>
-              Tax
-              <span id="taxes">$0.00</span>
-            </div>
-            <div class='finalTotal'>
-              Total
-              <span id="finaltotal">$0.00</span>
-            </div>
-            
-             <a class='checkout' href="./paymentOption.html" >
-              Check Out
-            </a>
-            <p class='error'></p>
-          </div>
+  <h2>Your Shopping Cart</h2>
+  <ul class='cart-items'></ul>
+  <div class='total'>
+    <div class='subtotalTotal'>
+      Subtotal
+      <span>$0.00</span>
     </div>
+    <div class='taxes'>
+      Tax
+      <span>$0.00</span>
+    </div>
+    <div class='shipping'>
+      Shipping
+      <span>$0.00</span>
+    </div>
+    <div class='finalTotal'>
+      Total
+      <span>$0.00</span>
+    </div>
+    <a class='checkout'>
+      Check Out
+    </a>
+    <p class='error'></p>
+  </div>
+</div>
+<div class='wrap' id='wrap'>
+    <a class='cart-link' href='#menu'>
+      <span class='cart-text fontawesome-shopping-cart'>
+        <span>Cart</span>
+      </span>
+      <span class='returnToShop'>&larr; Back</span>
+      <span class='cart-quantity empty'>0</span>
+    </a>
+  <section class='shop'></section>
+</div>
     
      </div>
-    </body>
+
+  </body>
 </html>
