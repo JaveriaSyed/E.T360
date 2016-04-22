@@ -57,9 +57,8 @@ body {
   }
 }
 .mapExplore {
-    height: 200px;
-    width:200px;
-    padding; 100px;
+
+    width: 100%;
     margin: inherit;
 }
 
@@ -82,9 +81,7 @@ body {
 .pageDescription {
     padding: 100px;
     margin: inherit;
-    
-    
-    
+    height: 340px;
 }
 
 
@@ -140,5 +137,46 @@ body {
   
 }
 
+#exploreOptions
+{
+    background-image: url("../IMAGES/gradientwhite.svg");
+    font-size: 25px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    list-style: none;
+    display: inline-block;
+    opacity: 0.7;
+
+}
 
 
+
+
+.choice a {
+    margin-top: 100px;
+}
+
+.choicetwo {
+    padding top: 300px; 
+}
+
+.container {
+
+    width: 98%;
+    display:flex; /*images remains in only one line*/
+    justify-content: center;
+    flex-wrap:wrap;/*When a element goes down  when the window is shorter*/
+    
+
+}
+
+.exploreSearch h3 {
+    font-family: 'BlackJack', sans-serif;
+    color: black;
+}
+
+.exploreSearch {
+    font-family: 'BlackJack', sans-serif;
+    color: black;
+    font-size: 27px;
+}

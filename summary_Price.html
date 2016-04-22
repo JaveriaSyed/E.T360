@@ -1,0 +1,221 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="./jquery.min.js"></script>
+
+<script type="text/javascript">
+var price;
+var tourName;
+var quantity;
+
+
+
+
+function typeTour(tempTourName, tempPrice){
+ tourName = tempTourName;
+ price = tempPrice;
+    
+       
+    setCookie('tempTour',tourName,2);
+    setCookie('tempPrice',price,2);
+    //alert(tourName+'\n'+price);
+  
+    
+    window.location="./payment.html";
+   
+    readTour();
+     
+ 
+   // document.cookie="username=John Doe; expires=Thu, 18 Dec 2016 12:00:00 UTC";
+}
+
+
+function readTour()
+{
+  //var w =  tourName;  
+    var w = 'Tour name: '+ getCookie('tempTour') + ', ' +'Price before Taxes: '+ getCookie('tempPrice'); 
+    
+    //window.location="./payment.html";
+    
+    document.getElementById("tourDetail").value = w;
+
+}
+
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+
+
+function calculate(){
+    var w;
+    w = document.getElementById("tname").value;
+    alert(w);
+    
+}
+
+function testRegExpEmail(){
+  var txt = new String();
+  txt = document.getElementById("email").value;
+ 
+  var path1 = /^([a-z]+\w*)@([a-z]{2,14})\.([a-z]{2,4})$/i;
+
+  if (path1.test(txt))
+  {
+    alert("Email Entered correctly");
+  }
+  else {
+    alert("The entry format is incorrect");
+    //document.getElementById("id1").value = "";
+  }
+}
+    
+	function cache(){
+	    $(document).ready(function(){
+            $("p").hide();
+        });
+ 	}
+	//Function to calculate the number of bills
+function calculate(){
+      var tot=0, res=0, s100=0, s50=0, s20=0, s10=0, s5=0;
+	  tot = parseFloat(document.getElementById("total").value);
+		//for 100
+        if (parseInt(tot/100) > 0)
+		   { s100 =  parseInt(tot/100);
+		     res = tot - (s100 * 100);
+			$(document).ready(function(){
+              $("#100d").show();
+            });
+			document.getElementById("100t").innerHTML = s100;
+			document.getElementById("100i").src = "./IMAGES/MONEY/100$.jpg";
+		     alert("100 : " + s100 + " res : " + res);
+		   }
+		else
+		   {res = tot;
+			$(document).ready(function(){
+              $("#100d").hide();
+            });
+		   }
+		 //for 50  
+		if (parseInt(res/50) > 0)
+		   { s50 =  parseInt(res/50);
+		     res = res - (s50 * 50);
+			$(document).ready(function(){
+              $("#50d").show();
+            });
+			document.getElementById("50t").innerHTML = s50;
+			document.getElementById("50i").src = "./IMAGES/MONEY/50$.jpg";
+		     alert("50 : " + s50 + " res : " + res);
+		   }   
+		else
+		   {res = res;
+			$(document).ready(function(){
+              $("#50d").hide();
+            });
+		   } 
+        //for 20
+        if (parseInt(res/20) > 0)
+		   { s20 =  parseInt(res/20);
+		     res = res - (s20 * 20);
+			$(document).ready(function(){
+              $("#20d").show();
+            });
+			document.getElementById("20t").innerHTML = s20;
+			document.getElementById("20i").src = "./IMAGES/MONEY/20$.jpg";
+            alert("20 : " + s20 + " res : " + res);
+		   
+		   }   
+		else
+		   {res = res;
+			$(document).ready(function(){
+              $("#20d").hide();
+            });
+		   }
+		 //for 10
+		 if (parseInt(res/10) > 0)
+		   { s10 =  parseInt(res/10);
+		     res = res - (s10 * 10);
+			$(document).ready(function(){
+              $("#10d").show();
+            });
+			document.getElementById("10t").innerHTML = s10;
+			document.getElementById("10i").src = "./IMAGES/MONEY/10$.jpg";
+		    alert("10 : " + s10 + " res : " + res);
+		   }   
+		else
+		   {res = res;
+			$(document).ready(function(){
+              $("#10d").hide();
+            });
+		   }
+        
+        //for 5
+         if (parseInt(res/5) > 0)
+		   { s5 =  parseInt(res/5);
+		     res = res - (s5 * 5);
+			$(document).ready(function(){
+              $("#5d").show();
+            });
+			document.getElementById("5t").innerHTML = s5;
+			document.getElementById("5i").src = "./IMAGES/MONEY/5$.jpg";
+		    alert("5 : " + s5 + " res : " + res);
+		   }   
+		else
+		   {res = res;
+			$(document).ready(function(){
+              $("#5d").hide();
+            });
+		   }
+        
+        }
+
+function showsummay()
+    {
+	alert('your registration has already been made!');
+    }
+    
+    
+</script>
+</head>
+
+<body onload="cache();">
+Total : <input id="total" type="text" value="100" />
+<h3 class="class1">Calculate cash:</h3>
+<p id="100d"><span id="100t">0</span><img id="100i" src="./IMAGES/MONEY/100$.jpg" width="150"></p>
+<p id="50d"><span id="50t">0</span><img id="50i" src="./IMAGES/MONEY/50$.jpg" width="150"></p>
+<p id="20d"><span id="20t">0</span><img id="20i" src="./IMAGES/MONEY/20$.jpg" width="150"></p>
+<p id="10d"><span id="10t">0</span><img id="10i" src="./IMAGES/MONEY/10$.jpg" width="150"></p>
+<p id="5d"><span id="5t">0</span><img id="5i" src="./IMAGES/MONEY/5$.jpg" width="150"></p>
+
+<input id="idb1" type="button" value="calc" onclick="calculate();"/>
+</body>
+</html>
+
+
+
+
+
+
+
+	
+
+
+
+
+
+

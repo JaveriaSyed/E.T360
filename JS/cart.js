@@ -1,4 +1,5 @@
 $(document).ready(function () {
+   
   // Product data to be used in shop and in cart
    var products = {'Red Carpet Package' : ['Red Carpet Package', "Come aboard and enjoy a VIP treatment that will lead you to the Red Carpet! Local cocktail, 6-course table d’hôte, half bottle of wine per person and digestif; Priority admission aboard; Live DJ to end the evening on the outside;Enchanted setting and a unique formula. Duration: 4h", 14, 'http://m.croisieresaml.com/cache/1/b/2/e/5/325a9b7aeb75856aad820f9d6cf2ee93c4c.jpg', 1],
       
@@ -125,9 +126,12 @@ $(document).ready(function () {
     });
     $('.subtotalTotal span').text(formatDollar(subtotal));
     tax = subtotal * .05;
+      
+      
     $('.taxes span').text(formatDollar(tax));
     $('.shipping span').text(formatDollar(shipping));
     $('.finalTotal span').text(formatDollar(subtotal + tax + shipping));
+      setCookie("subtotal",subtotal,1);
   }
 
   //  Update the total quantity of items in notification, hides if zero
@@ -177,14 +181,52 @@ $(document).ready(function () {
   });
   
   // Trigger error animation on Checkout button
+    function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+   function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length,c.length);
+        }
+    }
+    return "";
+}     
   
-  $('.checkout').on('click', function () {
-    $(this).addClass('active');
-    $('.error').css('display', 'block');
-    setTimeout(function () {
-      $('.checkout').removeClass('active');    
-      $('.error').css('display', 'none');      
-    }, 1000);
-  });    
+  $('.checkout').on('click', function setCookie (cvalue) {
+    
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cvalue;
+      //alert("jjhsdk");
+    //window.location.assign("http://google.com");
+      
+      
+      
+      
+      
+  });   
+        
+        
+        
   
+});
+    
+    
+    $('.card').on('click', function(e) {
+  e.preventDefault();
+  $('.card').removeClass('active');
+  $(this).addClass('active');
+  $('.form').stop().slideUp();
+  $('.form').delay(300).slideDown();
 });

@@ -3,12 +3,34 @@
   <head>
       
       <title>E.T360.com</title>
-               <link href="~/Content/css/jquery-ui.css" rel="stylesheet" />
-<script src="~/Content/js/jquery-1.10.2.js"></script>
-<script src="~/Content/js/jquery-ui.js"></script>
+        <link href="~/Content/css/jquery-ui.css" rel="stylesheet" />
+        <script src="~/Content/js/jquery-1.10.2.js"></script>
+        <script src="~/Content/js/jquery-ui.js"></script>
        <link rel= "stylesheet" type='text/css' href="CSS/flights_styleCSS.css"/ >
        <!--<link rel="stylesheet" type='text/css' href="CSS/fontello.css">  --> 
-             
+         <script>
+      
+  $(function() {
+    var availableTags = [
+      "Montreal",
+      "Toronto",
+      "Calgary",
+      "Ottawa",
+      "Edmonton",
+      "Mississauga",
+      "North York",
+      "Winnipeg",
+      "Vancouver",
+      "Scarborough"
+    ];
+      
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  });
+      
+  </script>
+          
              
   </head>
 								<!--Body-->
@@ -52,72 +74,74 @@
         </ul>
         </ul>
       </div>
-  
-     
-     <div class="boxSearch">
-          <h1>
-                Flight Search
-         </h1>
-         <br/> <br/><br/> 
-         <strong>   
-       <label for="tags"> Depart From: </label>  <input id="tags">
-             <br/><br/>
-          <label for="tags">Arrive At: </label>  <input id="tags">
-         <br/><br/> <br/><br/>
-         Arrival Time: <input type="text" placeholder="dd/mm/yyyy" aria-required="true">
-          <br/><br/>    
-        Departure Time: <input type="text" placeholder="dd/mm/yyyy" aria-required="true">
-         <br/><br/>
-         
-     
-         </strong>
-         
+      
+      
+      <div class="introFlight">
+     <h2> Search a flight </h2>   
+    
      </div>
+    
+    
      
-     <div class="boxResults">
-          <h1>
-                Results
-         </h1>
-         
-         <br/> <br/><br/> 
-         
-         <strong>   
-     
-             <label> From: </label>
-         <br/><br/>
-             <label> To: </label>
-          <br/><br/> <br/><br/>     
-         <label>Departing At:</label>
-             <br/><br/>
-         <label>
-             Arriving At: 
-         </label>
-         </strong>
-         
+        <table class="flightSearch">
+         <tr>
+                 <td class="boxSearch">
+                  <h1> Flight Search </h1>
+                 <br/> <br/><br/> 
+                 <strong>   
+               <label for="tags"> Depart From: </label>  <input id="tags">
+                     <br/><br/>
+                  <label for="tags">Arrive At: </label>  <input id="tags">
+                 <br/><br/> <br/><br/>
+                 Arrival Time: <input type="text" placeholder="dd/mm/yyyy" aria-required="true">
+                  <br/><br/>    
+                Departure Time: <input type="text" placeholder="dd/mm/yyyy" aria-required="true">
+                 <br/><br/>
+                 </strong>
+                </td>
+        
+                 <td class="boxResults">
+                  <h1>Results </h1>
+                 <br/><br/><br/> 
+                 <strong>   
+                    <label> From: </label>
+                 <br/><br/>
+                    <label> To: </label>
+                  <br/><br/> <br/><br/>     
+                 <label>Departing At:</label>
+                     <br/><br/>
+                 <label>Arriving At: </label>
+                 </strong>
+                 </td>
+         </tr>
+     </table>
 
-
-  <script>
-      
-  $(function() {
-    var availableTags = [
-      "Montreal",
-      "Toronto",
-      "Calgary",
-      "Ottawa",
-      "Edmonton",
-      "Mississauga",
-      "North York",
-      "Winnipeg",
-      "Vancouver",
-      "Scarborough"
-    ];
-      
-    $( "#tags" ).autocomplete({
-      source: availableTags
-    });
-  });
-      
-  </script>
-
+ 
+        
+<!--Footer of main web page-->
+     <div class="footer">
+              <div class="iconsocial">
+                    <table>
+                            
+                       
+                          <tr> 
+                                <td><div class="earth"></div> </td>
+                                <td> Contact us </td>
+                                
+                              <a href="https://www.facebook.com/">
+                               <td class="icon-facebook-squared"></td></a>
+                               
+                                <td class="icon-twitter" href="twitter.com"></td>
+                                <td class="icon-instagram" href="instagram.com"></td>
+                                <td class="icon-mail" href="gmail.com"></td> 
+                      
+                           <td><img src="/IMAGES/20120808060944908.jpg" height="60" width="60"></td>
+                           <td><img src="/IMAGES/20120808060946143.jpg" height="60" width="60"></td>
+                          <td><img src="/IMAGES/20120808060955705.jpg" height="60" width="60"></td>
+                       </tr> 
+                        
+                  </table>
+              </div>
+    </div>
     </body>
 </html>

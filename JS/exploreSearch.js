@@ -1,103 +1,61 @@
-var Array1 =  ["North America", 
-               "Central America", 
-               "South America"]; 
-
-
-var Array2 =  [" North America was reached by its first human populations during the last glacial period, via crossing the Bering land bridge. The so-called Paleo-Indian period is taken to have lasted until about 10,000 years ago (the beginning of the Archaic or Meso-Indian period). The Classic stage spans roughly the 6th to 13th centuries. The Pre-Columbian era ended with the arrival of European settlers during the Age of Discovery and the Early Modern period. Present-day cultural and ethnic patterns reflect different kind of interactions between European colonists, indigenous peoples, African slaves and their descendants. European influences are strongest in the northern parts of the continent while indigenous and African influences are relatively stronger in the south. Because of the history of colonialism, most North Americans speak English, Spanish or French and societies and states commonly reflect Western traditions.",
-               
-"Central America was inhabited by the indigenous peoples of Mesoamerica to the north and west and the Isthmo-Colombian peoples to the south and east. Soon after Christopher Columbus's voyages to the Americas, the Spanish began to colonize the Americas. From 1609 until 1821, most of the territory within Central America—except for the lands that would become Belize and Panama—was governed as the Captaincy General of Guatemala. After achieving independence from Spain in 1821, the former Captaincy General was annexed to the First Mexican Empire, but soon seceded from Mexico to form the Federal Republic of Central America, which lasted from 1823 to 1838. The seven states finally became independent autonomous nations, beginning with Nicaragua, Honduras, Costa Rica, and Guatemala (1838), followed by El Salvador (1841), then Panama (1903), and finally Belize (1981).",
-               
-"Most of the population lives near the continent's western or eastern coasts while the interior and the far south are sparsely populated. The geography of western South America is dominated by the Andes mountains; in contrast, the eastern part contains both highland regions and large lowlands where rivers such as the Amazon, Orinoco, and Paraná flow. Most of the continent lies in the tropics.", 
-
-
-var Array3 = [".", 
-              "./images/viet/T2hn_2.jpg",
-              "./images/viet/t3pq_2.jpg",
-              "./images/Col/Regions/SanAndresRegion.jpg"];
-
-
-
-
-
-
-function findCity() {
-    var indexPosition = -1;
-    var cityName = document.getElementById("city").value.toLowerCase();
-
-    switch (cityName) 
-    {
-        case "North America":
-            {
-                indexPosition = 0; 
-            }
-            break;
-            
-        case "Central America";
-            {
-                indexPosition = 1;
-            }
-            break;
-                   
-        case "South America": 
-            {
-                indexPosition = 2; 
-            }
-            break;  
-    }
-    
-    
-    if (indexPosition == -1)
-    {
-
-
-        alert(document.getElementById("city").value + " is not within the montreal region.");
-    }
-    else
-    {
-        
-        document.getElementById("id2").innerHTML=Array2[indexPosition];
-        document.getElementById("tempImg").src=Array3[indexPosition];
-        document.getElementById("cityName").innerHTML=Array1[indexPosition];
-        
-         window.scrollTo(0, 700);
-    }   
-}
-
-
-function showRegion(region)
-{
-    var index = 0;
-    
-    switch(region)
-        {
-            case "SanAndres":
+    function checkRegion() {
+    "use strict";
+    var arrNames =  ["montreal west",  "montreal", "montreal east"],
+        arrInfos =  [" Montreal West (French: Montréal-Ouest) is an on-island suburb in southwestern Quebec, Canada on the Island of Montreal.Montreal West is a small, close-knit community made up primarily of single-family dwellings. The town is largely composed of young families, and has a population of 5,184, as of the 2006 census. The town's area is 1.6 km². About 66% of the population of Montreal West speak English as their first language.", "Montreal: Historically the commercial capital of Canada, it was surpassed in population and economic strength by Toronto in the 1970s. It remains an important centre of commerce, aerospace, finance, pharmaceuticals, technology, design, education, culture, tourism, gaming, film and world affairs.[28] Along with Washington D.C and New York City, Montreal is one of the three North American cities home to organizations of the United Nations,[29] being the location for the headquarters of the International Civil Aviation Organization. Montreal has the second-highest number of consulates in North America.[29] Montreal was also named a UNESCO City of Design.[30][31] In 2009, Montreal was named North America's leading host city for international association events, according to the 2009 preliminary rankings of the International Congress and Convention Association (ICCA).[32] The 2016 edition of QS Best Student Cities ranked Montreal the 7th-best city in the world to be a university student.[33] In August 2015, the Economist Intelligence Unit's Global Liveability Ranking placed Montreal 14th out of 140 cities.[34]",
+                "Montreal East (in French: Montréal-Est), is an on-island suburb in southwestern Quebec, Canada on the island of Montreal, formerly part of the borough of Rivière-des-Prairies–Pointe-aux-Trembles–Montréal-Est. Montreal-Est has consistently been home to many large oil refineries since 1915."],
+        arrImgs = ["./IMAGES/MontrealWest.jpg", "./IMAGES/Montreal_Canada.jpg", "./IMAGES/BIODOME.jpg"],
+        result,
+        nRegion,
+        imgRegion,
+        index = -1,
+        i = 0;
+    nRegion = document.getElementById("RName").value.toLowerCase();
+    for (var i = 0; i < 3; i++)
+              {
+                if (arrNames[i] == nRegion)
                 {
-                            
-                    index = 3;   
+                  index = i;
+                  result = "Region: "+arrNames[index].toUpperCase()+
+                           " General Info: "+arrInfos[index];
+                  imgRegion = "A Quick Look"+arrImgs[index];		  
                 }
-                break;
-        case "caribbean coast":
-                {
-                            
-                    index = 4;
- 
-                }
-                break;
-                
-        case "pacific coast":
-                {
-                            
-                    index = 5;
+              }
+	  if (index == -1)
+	  {
+		result = "Region does not Exist! Select one on the Island";
+		imgRegion = "./IMAGES/Montreal_Canada.jpg";
+	  }  
 
-
-                }
-                break;
-        }
-    
-                    document.getElementById("cityName").innerHTML=Array1[index];  
-                    document.getElementById("id2").innerHTML=Array2[index];
-                    document.getElementById("tempImg").src=Array3[index];
-                
-    window.scrollTo(0, 700);
-
-}/*
+	  switch (nRegion){
+	    case "montreal west" :
+			result = "Region: "+arrNames[0].toUpperCase()+
+			         " General Info: "+ arrInfos[0];
+			imgRegion = "./IMAGES/MontrealWest.jpg";
+            break;					 
+		case "montreal" :
+			result = "Region: "+ arrNames[1].toUpperCase()+
+			         " General Info:  "+ arrInfos[1];
+			imgRegion = "./IMAGES/Montreal_Canada.jpg";
+            break;	
+        case "montreal east" :
+			result = "Region: "+ arrNames[2].toUpperCase()+
+			         " General Info:  "+ arrInfos[2];
+			imgRegion = "./IMAGES/BIODOME.jpg";
+            break;	
+		
+		default :
+			result = "Region does not exist within Montreal";
+			imgRegion = "./IMAGES/Montreal_Canada.jpg";
+			break;					 
+		}
+        document.getElementById("Res").innerHTML = result;
+		document.getElementById("Rimg").src = imgRegion;	  
+	}
+function setRegion(Result)
+	{
+        "use strict";
+        document.getElementById("RName").value = Result;
+        checkRegion();
+	}
+      
+     
