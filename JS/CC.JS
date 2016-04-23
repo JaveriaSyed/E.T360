@@ -42,16 +42,28 @@ $('#card-ccv').on('focus', function(){
 });
 
 
-validate(function(){
-    
-if (!document.getElementById("cardNumber").disabled) { // Validate Card Number
-    var getCardNumber = document.getElementById("cardNumber").value;
-    var regCard = /^([0-9]{4})\-([0-9]{4})\-([0-9]{4})\-([0-9]{4})$/;
-    if (!regCard.test(getCardNumber)) {
-      alert("Please enter a valid Credit Card Number. For example: 1111-2222-3333-4444");
-      return false;
-    } else {
-      setCookie(name="cardNumber",value=getCardNumber,365); // Set Cookie for Card Number
-    }
+/*--------------------
+CodePen Tile Preview
+--------------------*/
+setTimeout(function(){
+  $('#card-ccv').focus().delay(1000).queue(function(){
+    $(this).blur().dequeue();
+  });
+}, 500);
+
+/*function getCreditCardType(accountNumber) {
+  if (/^5[1-5]/.test(accountNumber)) {
+    result = 'mastercard';
+  } else if (/^4/.test(accountNumber)) {
+    result = 'visa';
+  } else if ( /^(5018|5020|5038|6304|6759|676[1-3])/.test(accountNumber)) {
+    result = 'maestro';
+  } else {
+    result = 'unknown'
   }
-})
+  return result;
+}
+
+$('#card-number').change(function(){
+  console.log(getCreditCardType($(this).val()));
+})*/

@@ -196,6 +196,8 @@ $(document).ready(function() {
       $('.checkout').removeClass('active');    
       $('.error').css('display', 'none');      
     }, 1000);
+    document.cookie = $('.finalTotal span').text;
+    var x = document.cookie;
   });    
   
 });

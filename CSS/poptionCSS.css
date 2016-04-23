@@ -8,6 +8,15 @@ body {
 	background: #2D2F33;
 	font-family: 'Varela Round', 'Ionicons';
 }
+.cashn {
+    overflow:scroll;
+    position: absolute;
+    height:230px;
+    top: 60px;
+    right: 10px;
+    left: 10px;
+}
+
 ::selection { background: #3F8EFC; color: #fff; }
 a { text-decoration: none; }
 
@@ -130,13 +139,34 @@ a { text-decoration: none; }
 }
 
 .platforms a:nth-child(1):after {
-	content: '\f247';
+     display: inline-block;
+    width: 150px;
+    height: 130px;
+    margin-right: 5px;
+    content: "";
+    background: url("/IMAGES/cash.png") no-repeat 0 0;
+    background-size: 100%;
+    overflow: hidden;
 }
 .platforms a:nth-child(2):after {
-	content: '\f227';
+    display: inline-block;
+    width: 150px;
+    height: 130px;
+    margin-right: 5px;
+    content: "";
+    background: url("/IMAGES/credit-cards.png") no-repeat 0 0;
+    background-size: 100%;
+    overflow: hidden;
 }
 .platforms a:nth-child(3):after {
-	content: '\f2c5';
+         display: inline-block;
+    width: 150px;
+    height: 220px;
+    margin-right: 5px;
+    content: "";
+    background: url("/IMAGES/paypal.png") no-repeat 0 0;
+    background-size: 100%;
+    overflow: hidden;
 }
 
 .installer {
@@ -160,13 +190,14 @@ a { text-decoration: none; }
 .installer a.back {
 	position: absolute;
 	top: 10px;
-	left: 10px;
+	left: -180px;
 	width: 38px;
 	height: 38px;
 	line-height: 38px;
 	text-align: center;
 	font-size: 200%;
 	color: #bbb;
+    content: url('/IMAGES/back.png')
 }
 .installer a.back:before {
 	content: '\f3d5';
@@ -191,6 +222,7 @@ a { text-decoration: none; }
 	opacity: 1;
 }
 .installer a.close {
+    content: '';
 	position: absolute;
 	top: 10px;
 	right: 10px;
@@ -198,7 +230,14 @@ a { text-decoration: none; }
 	color: #bbb;
 }
 .installer a.close:before {
-	content: '\f405';
+    content: "";
+    background: url("/IMAGES/close.png") no-repeat 0 0;
+    background-size: 100%;
+    position: absolute;
+    right: 1px;
+    top: -15px;
+    height: 35px;
+    width: 35px;
 }
 .installer a.close:after {
 	content: 'Close';
@@ -239,7 +278,7 @@ a { text-decoration: none; }
 	color: #3F8EFC;
 }
 .installer .info:after {
-	content: attr(data-weight);
+	 content: 'cookievalue'; 
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
@@ -252,7 +291,18 @@ a { text-decoration: none; }
 	color: #aaa;
 }
 .installer#windows .info:before {
-	content: '\f247';
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    display: inline-block;
+    width: 150px;
+    height: 130px;
+    margin-right: 5px;
+    content: "";
+    background: url("/IMAGES/cash.png") no-repeat 0 0;
+    background-size: 100%;
+    overflow: hidden;
+    padding-top: 60px;
 }
 .installer#mac .info:before {
 	content: '\f227';
@@ -316,8 +366,8 @@ a { text-decoration: none; }
 
 .installer label {
 	position: absolute;
-	bottom: 20px;
-	right: 60px;
+	bottom: 180px;
+	right: 70px;
 	height: 40px;
 	width: 260px;
 	border-radius: 5px;
@@ -341,7 +391,7 @@ a { text-decoration: none; }
 	animation: downloadSuccess 3.1s ease;
 }
 .installer label span:after {
-	content: 'DOWNLOAD';
+	content: 'CALCULATE';
 	position: absolute;
 	width: 80%;
 	height: 100%;
@@ -351,6 +401,7 @@ a { text-decoration: none; }
 .installer label input:checked ~ span:after {
 	content: '✔ SUCCESS!';
 	animation: downloadState 3s;
+    color: chocolate;
 }
 .installer label span:before {
 	content: '';
@@ -377,7 +428,7 @@ a { text-decoration: none; }
 
 @keyframes downloadState {
 	0%, 95% {
-		content: 'DOWNLOADING...'
+		content: 'CALCULATING...'
 	}
 	100% {
 		content: '✔ SUCCESS!'
@@ -406,4 +457,3 @@ a { text-decoration: none; }
 		width: 100%;
 		opacity: 0;
 	}
-}
