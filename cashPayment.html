@@ -1,0 +1,213 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="./jquery.min.js"></script>
+<link rel= "stylesheet" type='text/css' href="CSS/poptionCSS.css"/ >
+
+<script type="text/javascript">
+	function cache(){
+	    $(document).ready(function(){
+            $("p").hide();
+        });
+ 	}
+	
+	  function calculate(){
+      var tot=0, res=0, s100=0, s50=0, s20=0, s10=0, s5=0, s2=0, s1=0, s25=0, s05=0, s010=0;
+	  tot = parseFloat(document.getElementById("total").value);
+		//for 100
+        if (parseInt(tot/100) > 0)
+		   { s100 =  parseInt(tot/100);
+		     res = tot - (s100 * 100);
+			$(document).ready(function(){
+              $("#100d").show();
+            });
+			document.getElementById("100t").innerHTML = s100;
+			document.getElementById("100i").src = "./IMAGES/MONEY/100$.jpg";
+		     alert("100 : " + s100 + " res : " + res);
+		   }
+		else
+		   {res = tot;
+			$(document).ready(function(){
+              $("#100d").hide();
+            });
+		   }
+		 //for 50  
+		if (parseInt(res/50) > 0)
+		   { s50 =  parseInt(res/50);
+		     res = res - (s50 * 50);
+			$(document).ready(function(){
+              $("#50d").show();
+            });
+			document.getElementById("50t").innerHTML = s50;
+			document.getElementById("50i").src = "./IMAGES/MONEY/50$.jpg";
+		     alert("50 : " + s50 + " res : " + res);
+		   }   
+		else
+		   {res = res;
+			$(document).ready(function(){
+              $("#50d").hide();
+            });
+		   } 
+        //for 20
+        if (parseInt(res/20) > 0)
+		   { s20 =  parseInt(res/20);
+		     res = res - (s20 * 20);
+			$(document).ready(function(){
+              $("#20d").show();
+            });
+			document.getElementById("20t").innerHTML = s20;
+			document.getElementById("20i").src = "./IMAGES/MONEY/20$.jpg";
+            alert("20 : " + s20 + " res : " + res);
+		   
+		   }   
+		else
+		   {res = res;
+			$(document).ready(function(){
+              $("#20d").hide();
+            });
+		   }
+		 //for 10
+		 if (parseInt(res/10) > 0)
+		   { s10 =  parseInt(res/10);
+		     res = res - (s10 * 10);
+			$(document).ready(function(){
+              $("#10d").show();
+            });
+			document.getElementById("10t").innerHTML = s10;
+			document.getElementById("10i").src = "./IMAGES/MONEY/10$.jpg";
+		    alert("10 : " + s10 + " res : " + res);
+		   }   
+		else
+		   {res = res;
+			$(document).ready(function(){
+              $("#10d").hide();
+            });
+		   }
+        
+        //for 5
+         if (parseInt(res/5) > 0)
+		   { s5 =  parseInt(res/5);
+		     res = res - (s5 * 5);
+			$(document).ready(function(){
+              $("#5d").show();
+            });
+			document.getElementById("5t").innerHTML = s5;
+			document.getElementById("5i").src = "./IMAGES/MONEY/5$.jpg";
+		    alert("5 : " + s5 + " res : " + res);
+		   }   
+		else
+		   {res = res;
+			$(document).ready(function(){
+              $("#5d").hide();
+            });
+		   }
+            //for 2
+         if (parseInt(res/2) > 0)
+		   { s2 =  parseInt(res/2);
+		     res = res - (s2 * 2);
+			$(document).ready(function(){
+              $("#2d").show();
+            });
+			document.getElementById("2t").innerHTML = s2;
+			document.getElementById("2i").src = "./IMAGES/MONEY/2$.jpg";
+		   }   
+		else
+		   {res = res;
+			$(document).ready(function(){
+              $("#2d").hide();
+            });
+		   }
+    
+             //for 1
+         if (parseInt(res/1) > 0)
+		   { s1 =  parseInt(res/1);
+		     res = res - (s1 * 1);
+			$(document).ready(function(){
+              $("#1d").show();
+            });
+			document.getElementById("1t").innerHTML = s1;
+			document.getElementById("1i").src = "./IMAGES/MONEY/1$.jpg";
+		   }   
+		else
+		   {res = res;
+			$(document).ready(function(){
+              $("#1d").hide();
+            });
+		   }
+        
+             //for 25 cents
+         if (parseInt(res/0.25) > 0.00)
+		   { s25 =  parseInt(res/0.25);
+		     res = res - (s25 * 1);
+			$(document).ready(function(){
+              $("#0.25d").show();
+            });
+			document.getElementById("0.25t").innerHTML = s1;
+			document.getElementById("0.25i").src = "./IMAGES/MONEY/25cents.jpg";
+		   }   
+		else
+		   {res = res;
+			$(document).ready(function(){
+              $("#0.25d").hide();
+            });
+		   }
+    
+           //for 10 cents
+         if (parseInt(res/010) > 0)
+		   { s010 =  parseInt(res/010);
+		     res = res - (s010 * 1);
+			$(document).ready(function(){
+              $("#010d").show();
+            });
+			document.getElementById("010t").innerHTML = s1;
+			document.getElementById("010").src = "./IMAGES/MONEY/10cents.jpg";
+		   }   
+		else
+		   {res = res;
+			$(document).ready(function(){
+              $("#010").hide();
+            });
+		   }
+    
+          //for 5 cents
+         if (parseInt(res/05) > 0)
+		   { s05 =  parseInt(res/05);
+		     res = res - (s05 * 1);
+			$(document).ready(function(){
+              $("#05d").show();
+            });
+			document.getElementById("05t").innerHTML = s1;
+			document.getElementById("05").src = "./IMAGES/MONEY/5cents.jpg";
+		   }   
+		else
+		   {res = res;
+			$(document).ready(function(){
+              $("#05").hide();
+            });
+		   }
+        }
+</script>
+
+</head>
+
+
+<body onload="cache();">
+
+<div class="moneybox">
+Total : <input class="moneybox" id="total" type="text" value="100" />
+            <h3 class="moneybox">Calculate cash:</h3>
+            <p id="100d"><span id="100t">0</span><img id="100i" src="/IMAGES/Money/100$.JPG" width="150"></p>
+            <p id="50d"><span id="50t">0</span><img id="50i" src="/IMAGES/Money/50$.JPG" width="150"></p>
+            <p id="20d"><span id="20t">0</span><img id="20i" src="/IMAGES/Money/20$.JPG" width="150"></p>
+            <p id="10d"><span id="10t">0</span><img id="10i" src="/IMAGES//Money/10$.JPG" width="150"></p>
+            <p id="5d"><span id="5t">0</span><img id="5i" src="/IMAGES/Money/5$.JPG" width="150"></p>
+            <p id="20d"><span id="2t">0</span><img id="2i" src="/IMAGES/Money/2$.jpg" width="150"></p>     
+            <p id="1d"><span id="1t">0</span><img id="1i" src="/IMAGES/Money/1$.jpg" width="150"></p>
+            <p id="0.25d"><span id="0.25t">0</span><img id="0.25i" src="/IMAGES/Money/25cents.jpg" width="150"></p>
+            <p id="010d"><span id="010t">0</span><img id="010i" src="/IMAGES/Money/10cents.jpg" width="150"></p>
+            <p id="05d"><span id="05t">0</span><img id="05i" src="/IMAGES/Money/5cents.jpg" width="150"></p>
+
+<input id="idb1" type="button" value="Calculate" onclick="calculate();"/>
+    </div>
+</body>
+</html>

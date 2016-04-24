@@ -1,6 +1,8 @@
-
-@import url(main_headerCSS.css);
+@import url(fontello.css);
 @import url(main_memberstarsCSS.css);
+@import url(main_headerCSS.css);
+@import url(main_topCSS.css);
+@import url(main_footerCSS.css);
 
 body {
 	margin: 0;
@@ -8,6 +10,15 @@ body {
 	background: #2D2F33;
 	font-family: 'Varela Round', 'Ionicons';
 }
+.cashn {
+    overflow:scroll;
+    position: absolute;
+    height:230px;
+    top: 60px;
+    right: 10px;
+    left: 10px;
+}
+
 ::selection { background: #3F8EFC; color: #fff; }
 a { text-decoration: none; }
 
@@ -130,13 +141,34 @@ a { text-decoration: none; }
 }
 
 .platforms a:nth-child(1):after {
-	content: '\f247';
+     display: inline-block;
+    width: 150px;
+    height: 130px;
+    margin-right: 5px;
+    content: "";
+    background: url("/IMAGES/cash.png") no-repeat 0 0;
+    background-size: 100%;
+    overflow: hidden;
 }
 .platforms a:nth-child(2):after {
-	content: '\f227';
+    display: inline-block;
+    width: 150px;
+    height: 130px;
+    margin-right: 5px;
+    content: "";
+    background: url("/IMAGES/credit-cards.png") no-repeat 0 0;
+    background-size: 100%;
+    overflow: hidden;
 }
 .platforms a:nth-child(3):after {
-	content: '\f2c5';
+         display: inline-block;
+    width: 150px;
+    height: 220px;
+    margin-right: 5px;
+    content: "";
+    background: url("/IMAGES/paypal.png") no-repeat 0 0;
+    background-size: 100%;
+    overflow: hidden;
 }
 
 .installer {
@@ -160,13 +192,14 @@ a { text-decoration: none; }
 .installer a.back {
 	position: absolute;
 	top: 10px;
-	left: 10px;
+	left: -180px;
 	width: 38px;
 	height: 38px;
 	line-height: 38px;
 	text-align: center;
 	font-size: 200%;
 	color: #bbb;
+    content: url('/IMAGES/back.png')
 }
 .installer a.back:before {
 	content: '\f3d5';
@@ -191,6 +224,7 @@ a { text-decoration: none; }
 	opacity: 1;
 }
 .installer a.close {
+    content: '';
 	position: absolute;
 	top: 10px;
 	right: 10px;
@@ -198,7 +232,14 @@ a { text-decoration: none; }
 	color: #bbb;
 }
 .installer a.close:before {
-	content: '\f405';
+    content: "";
+    background: url("/IMAGES/close.png") no-repeat 0 0;
+    background-size: 100%;
+    position: absolute;
+    right: 1px;
+    top: -15px;
+    height: 35px;
+    width: 35px;
 }
 .installer a.close:after {
 	content: 'Close';
@@ -239,7 +280,7 @@ a { text-decoration: none; }
 	color: #3F8EFC;
 }
 .installer .info:after {
-	content: attr(data-weight);
+	 content: 'cookievalue'; 
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
@@ -252,7 +293,18 @@ a { text-decoration: none; }
 	color: #aaa;
 }
 .installer#windows .info:before {
-	content: '\f247';
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    display: inline-block;
+    width: 150px;
+    height: 130px;
+    margin-right: 5px;
+    content: "";
+    background: url("/IMAGES/cash.png") no-repeat 0 0;
+    background-size: 100%;
+    overflow: hidden;
+    padding-top: 60px;
 }
 .installer#mac .info:before {
 	content: '\f227';
@@ -316,8 +368,8 @@ a { text-decoration: none; }
 
 .installer label {
 	position: absolute;
-	bottom: 20px;
-	right: 60px;
+	bottom: 180px;
+	right: 70px;
 	height: 40px;
 	width: 260px;
 	border-radius: 5px;
@@ -341,7 +393,7 @@ a { text-decoration: none; }
 	animation: downloadSuccess 3.1s ease;
 }
 .installer label span:after {
-	content: 'DOWNLOAD';
+	content: 'CALCULATE';
 	position: absolute;
 	width: 80%;
 	height: 100%;
@@ -351,6 +403,7 @@ a { text-decoration: none; }
 .installer label input:checked ~ span:after {
 	content: '✔ SUCCESS!';
 	animation: downloadState 3s;
+    color: chocolate;
 }
 .installer label span:before {
 	content: '';
@@ -366,44 +419,21 @@ a { text-decoration: none; }
 	animation: downloadProgress 3s cubic-bezier(.67,.13,.1,.81);
 }
 
-@keyframes downloadSuccess {
-	0%, 90% {
-		background: #3F8EFC;
-	}
-	100% {
-		background: #87E544;
-	}
+
+
+
+.moneybox p {
+    background-color: #bbb;
+    text-align: center;
 }
 
-@keyframes downloadState {
-	0%, 95% {
-		content: 'DOWNLOADING...'
-	}
-	100% {
-		content: '✔ SUCCESS!'
-	}
+.moneybox input {
+    background-color: #bbb;
+    text-align: center;
 }
 
-@keyframes downloadProgress {
-	0% {
-		width: 5%;
-		opacity: 1;
-	}
-	35% {
-		width: 17%;
-	}
-	64% {
-		width: 51%;
-	}
-	81% {
-		width: 70%;
-	}
-	90% {
-		width: 86%;
-		opacity: 1;
-	}
-	100% {
-		width: 100%;
-		opacity: 0;
-	}
+.moneybox {
+        background-color: #ffffff;
+    text-align: center;
+
 }

@@ -178,7 +178,7 @@ $(document).ready(function() {
   
   // Trigger animation on Add to Cart button click
   
-  $('.addtocart').on('click', function () {
+  $('#addtocart').on('click', function () {
     $(this).addClass('active');
     setTimeout(function () {
       $('.addtocart').removeClass('active');    
